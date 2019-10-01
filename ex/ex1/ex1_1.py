@@ -9,7 +9,7 @@ cisco3 = {
     'host': 'cisco3.lasthop.io',
     'username': username,
     'password': password,
-    'device_type': device_type
+    'device_type': device_type,
 
 }
 
@@ -21,10 +21,12 @@ cisco4 = {
 }
 
 
-for gear in (cisco3, cisco4):
-    net_connect = ConnectHandler(**gear)
+for device in (cisco3, cisco4):
+    net_connect = ConnectHandler(**device)
     output = net_connect.send_command('show version')
-    filename = gear['host']
+    filename = device['host']
 
     with open(filename, 'w') as file_object:
         file_object.write(output)
+
+    net_connect.disconnect()
