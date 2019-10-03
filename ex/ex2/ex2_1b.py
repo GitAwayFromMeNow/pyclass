@@ -17,5 +17,5 @@ net_connect.send_command('5',expect_string=r'100')
 net_connect.send_command('100',expect_string=r'2')
 net_connect.send_command('2',expect_string=r'n')
 net_connect.send_command('n',expect_string=r'n')
-net_connect.send_command('n',expect_string=r'#')
+print(net_connect.send_command('n',expect_string=r'#'))
 

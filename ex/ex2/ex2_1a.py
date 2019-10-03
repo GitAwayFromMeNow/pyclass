@@ -10,12 +10,12 @@ CISCO4 = {
 
 net_connect = ConnectHandler(**CISCO4)
 
-print(net_connect.send_command_timing('ping'))
-print(net_connect.send_command_timing('IP'))
-print(net_connect.send_command_timing('8.8.8.8'))
-print(net_connect.send_command_timing('5'))
-print(net_connect.send_command_timing('100'))
-print(net_connect.send_command_timing('2'))
-print(net_connect.send_command_timing('n'))
+net_connect.send_command_timing('ping')
+net_connect.send_command_timing('IP')
+net_connect.send_command_timing('8.8.8.8')
+net_connect.send_command_timing('5')
+net_connect.send_command_timing('100')
+net_connect.send_command_timing('2')
+net_connect.send_command_timing('n')
 print(net_connect.send_command_timing('n'))
 
