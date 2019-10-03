@@ -11,4 +11,3 @@ CISCO4 = {
 net_connect = ConnectHandler(**CISCO4)
 
 
-test
