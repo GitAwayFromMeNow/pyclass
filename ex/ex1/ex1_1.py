@@ -1,27 +1,27 @@
 from netmiko import ConnectHandler
 
-username = 'pyclass'
-password = '88newclass'
-device_type = 'cisco_ios'
+USERNAME = 'pyclass'
+PASSWORD = '88newclass'
+DEVICE_TYPE = 'cisco_ios'
 
 
-cisco3 = {
+CISCO3 = {
     'host': 'cisco3.lasthop.io',
-    'username': username,
-    'password': password,
-    'device_type': device_type,
+    'username': USERNAME,
+    'password': PASSWORD,
+    'device_type': DEVICE_TYPE,
 
 }
 
-cisco4 = {
+CISCO4 = {
     'host': 'cisco4.lasthop.io',
-    'username': username,
-    'password': password,
-    'device_type': device_type,
+    'username': USERNAME,
+    'password': PASSWORD,
+    'device_type': DEVICE_TYPE,
 }
 
 
-for device in (cisco3, cisco4):
+for device in (CISCO3, CISCO4):
     net_connect = ConnectHandler(**device)
     output = net_connect.send_command('show version')
     filename = device['host']
